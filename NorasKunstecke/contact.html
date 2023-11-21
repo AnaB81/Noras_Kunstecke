@@ -64,10 +64,7 @@
       <input type="text" id="yourname" name="yourname" required>
       <input type="submit" onclick="" value="Schicke Nora liebe Grüsse">
     </form>
-    <form class="needhugs" name="needhugs" data-netlify="true">
-      <button id="hugbtn">Ich brauche Knuddel</button>
-      
-    </form>
+    <button id="hugbtn">Ich brauche Knuddel</button>
     <div id="modal_drawings" class="modal">
       <span class="closemodal">&times;</span>
       <img class="gifzoom" id="img02">
@@ -79,16 +76,17 @@
   </footer>
 
   <script>
-    document.getElementById("hugbtn").addEventListener("click", function() {
-      document.getElementById("modal_drawings").style.display="block";
+    document.getElementById("hugbtn").addEventListener("click", function () {
+      document.getElementById("modal_drawings").style.display = "block";
       document.getElementById("img02").src = "./Images/penguinhugs.gif";
     });
 
-    document.querySelector(".closemodal").addEventListener("", function() {
-      document.getElementById("modal_drawings").style.display="none";
-    })
+    var span = document.getElementsByClassName("closemodal")[0];
 
-    
+    span.onclick = function () {
+      document.getElementById("modal_drawings").style.display = "none";
+    }
+
 
   </script>
 
