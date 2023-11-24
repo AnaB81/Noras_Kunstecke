@@ -33,14 +33,14 @@
   </header>
 
   <section class="image_gallery">
-    <img id="drawings" src="./Images/Drawing Ed Edda.jpg" alt="Ed und Edda"/>
-    <img id="drawings" src="./Images/Drawing house.jpg" alt="Haus mit Perspektive"/>
-    <img id="drawings" src="./Images/Drawing Marin.jpg" alt="Marin"/>
-    <img id="drawings" src="./Images/Drawing Marin 2.jpg" alt="Marin"/>
-    <img id="drawings" src="./Images/Drawing Picachu.jpg" alt="Picachu"/>
-    <img id="drawings" src="./Images/Drawing Pingi.jpg" alt="Pingi"/>
-    <img id="drawings" src="./Images/Drawing_Nora.jpg" alt="Nora"/>
-    <img id="drawings" src="./Images/Lloyd.jpg" alt="Lloyd" />
+    <img class="drawings" src="./Images/Drawing Ed Edda.jpg" alt="Ed und Edda" />
+    <img class="drawings" src="./Images/Drawing house.jpg" alt="Haus mit Perspektive" />
+    <img class="drawings" src="./Images/Drawing Marin.jpg" alt="Marin" />
+    <img class="drawings" src="./Images/Drawing Marin 2.jpg" alt="Marin" />
+    <img class="drawings" src="./Images/Drawing Picachu.jpg" alt="Picachu" />
+    <img class="drawings" src="./Images/Drawing Pingi.jpg" alt="Pingi" />
+    <img class="drawings" src="./Images/Drawing_Nora.jpg" alt="Nora" />
+    <img class="drawings" src="./Images/Lloyd.jpg" alt="Lloyd" />
 
     <div id="modal_drawings" class="modal">
       <span class="closemodal">&times;</span>
@@ -51,15 +51,17 @@
 
   <script>
     var modal = document.getElementById("modal_drawings");
-    var img =document.getElementById("drawings");
+    var img = document.querySelectorAll(".drawings");
     var modalImg = document.getElementById("img01");
     var captionText = document.getElementById("caption");
 
-    img.onclick = function() {
-      modal.style.display = "block";
-      modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
-    }
+    img.forEach((imgA) => {
+      imgA.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      }
+    });
 
     var span = document.getElementsByClassName("closemodal")[0];
 

@@ -268,7 +268,7 @@ input[type="text"]:invalid {
 }
 
 button {
-  width: auto;
+  width: 200px;
   height: auto;
   border-radius: 5px;
   border: 1px solid rgb(40, 39, 39);
@@ -522,5 +522,5 @@ button {
     text-decoration: none;
     cursor: pointer;
   }
-  
+
 }
